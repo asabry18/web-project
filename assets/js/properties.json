@@ -1,0 +1,86 @@
+[
+  {
+    "id": "0",
+    "image": "../assets/images/property/home1.jpg",
+    "sale": "For Sell",
+    "price": "$13,000/mo",
+    "type": "Apartment",
+    "title": "Luxury Family Home",
+    "details": "Beds: 1, Baths: 1, SqFt: 8280",
+    "buyerImage": "../assets/images/property/pexels-photo-2379005.jpeg",
+    "buyerName": "Ali Mobarak",
+    "time": "1 year ago"
+  },
+  {
+    "id": "1",
+    "image": "../assets/images/property/home2.jpg",
+    "sale": "For Rent",
+    "price": "$10,000/mo",
+    "type": "Villa",
+    "title": "Doublex For Sale",
+    "details": "Beds: 3, Baths: 2, SqFt: 20000",
+    "buyerImage": "../assets/images/property/pexels-photo-2379005.jpeg",
+    "buyerName": "Abdelrahman Shalaby",
+    "time": "2 months ago"
+  },
+  {
+    "id": "2",
+    "image": "../assets/images/property/home6.jpg",
+    "sale": "For Sell",
+    "price": "$13,000/mo",
+    "type": "Apartment",
+    "title": "Luxury Family Home",
+    "details": "Beds: 1, Baths: 1, SqFt: 8280",
+    "buyerImage": "../assets/images/property/pexels-photo-2379005.jpeg",
+    "buyerName": "Mohamed Ahmed",
+    "time": "1 month ago"
+  },
+  {
+    "id": "3",
+    "image": "../assets/images/property/home4.jpg",
+    "sale": "For Sell",
+    "price": "$13,000/mo",
+    "type": "Apartment",
+    "title": "Luxury Family Home",
+    "details": "Beds: 1, Baths: 1, SqFt: 8280",
+    "buyerImage": "../assets/images/property/pexels-photo-2379005.jpeg",
+    "buyerName": "Ahmed Sabry",
+    "time": "2 weeks ago"
+  },
+  {
+    "id": "4",
+    "image": "../assets/images/property/home5.jpeg",
+    "sale": "For Sell",
+    "price": "$13,000/mo",
+    "type": "Apartment",
+    "title": "Luxury Family Home",
+    "details": "Beds: 1, Baths: 1, SqFt: 8280",
+    "buyerImage": "../assets/images/property/pexels-photo-2379005.jpeg",
+    "buyerName": "Nariman mahmoud",
+    "time": "1 week ago"
+  },
+  {
+    "id": "5",
+    "image": "../assets/images/property/home1.jpg",
+    "sale": "For Sell",
+    "price": "$13,000/mo",
+    "type": "Apartment",
+    "title": "Luxury Family Home",
+    "details": "Beds: 1, Baths: 1, SqFt: 8280",
+    "buyerImage": "../assets/images/property/pexels-photo-2379005.jpeg",
+    "buyerName": "Razan Mohamed",
+    "time": "1 year ago"
+  },
+  {
+    "id": "6",
+    "image": "../assets/images/property/home1.jpg",
+    "sale": "For Sell",
+    "price": "$13,000/mo",
+    "type": "Apartment",
+    "title": "Luxury Family Home",
+    "details": "Beds: 1, Baths: 1, SqFt: 8280",
+    "buyerImage": "../assets/images/property/pexels-photo-2379005.jpeg",
+    "buyerName": "Nasser Maher",
+    "time": "5 months ago"
+  }
+]

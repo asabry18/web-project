@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us - FindHouse</title>
+    <link rel="stylesheet" href="../assets/css/contactUs.css">
+    <link rel="stylesheet" href="../assets/css/view.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../assets/images/logo-1.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo-2.png" alt="Logo" class="logo-img">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="property.html">Property</a>
+            <a href="#">About Us</a>
+            <a class="active" href="contactUs.html">Contact Us</a>
+            <a href="register.html"><button class="register-btn">+ Register</button></a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-form">
+            <H3>Send Us An Email</H3><br>
+            <form id="contactForm" action="" method="post">
+                <label>NAME</label>
+                <input type="text" placeholder="Name" name="name">
+                <div class="error" id="nameError"></div>
+
+                <label>EMAIL</label>
+                <input type="email" placeholder="WRITE A VALID EMAIL" name="mail">
+                <div class="error" id="emailError"></div>
+
+                <label>PHONE</label>
+                <input type="text" placeholder="Phone" name="phone_num">
+                <div class="error" id="phoneError"></div>
+
+                <label>SUBJECT</label>
+                <input type="text" placeholder="Subject" name="sub">
+                <div class="error" id="subjectError"></div>
+
+                <label>MESSAGE</label>
+                <textarea placeholder="Your Message" name="messge"></textarea>
+                <div class="error" id="messageError"></div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-details">
+            <H3>CONTACT US</H3><br>
+            <p><b>Address:</b><br>2301 GIZA</p><br>
+            <p><b>Phone:</b><br>(+20) 123 456 789</p><br>
+            <p><b>Mail:</b><br><a href="mailto:o@nn.sa">20200775@stud.fci-cu.edu.eg </a></p><br>
+            <p><b>Skype:</b> findhouse.com</p><br>
+            <div class="social">
+                <p><b>Follow Us</b></p>
+                <a href="http://facebook.com" class="fab fa-facebook" target="_blank" title="open"></a>
+                <a href="http://X.com" class="fab fa-twitter" target="_blank" title="open"></a>
+                <a href="http://Instagram.com" class="fab fa-instagram" target="_blank" title="open"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-section">
+        <div class="estate-agent">
+            <h3>Become a Real Estate Agent</h3>
+            <p>We only work with the best companies around the globe</p>
+        </div>
+        <div>
+            <a href="register.html"><button>Register Now</button></a>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Site</h3>
+                <p>We’re reimagining how you buy, sell and rent.<br> It’s now easier to get into a place you love. So
+                    let’s do this, together.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">User's Guide</a></li>
+                    <li><a href="#">Support Center</a></li>
+                    <li><a href="#">Press Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>info@findhouse.com</p>
+                <p>Collins Street West, Victoria 8007, Australia.</p>
+                <p>+1 246-345-0699</p>
+                <p>+1 246-345-0695</p>
+            </div>
+            <div class="footer-section follow">
+                <h3>Follow us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+                <h3>Subscribe</h3>
+                <div class="subscribe">
+                    <input type="email" placeholder="Your email">
+                    <button><i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../assets/js/contact.js"></script>
+
+</html>

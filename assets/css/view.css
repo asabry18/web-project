@@ -1,0 +1,166 @@
+
+/* Navbar */
+.active{
+    color: #ff5a5f !important;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0px 1px 5px #b3b3b3;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 75%;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #24324a;
+    font-weight: 500;
+}
+
+.nav-links a:hover{
+    color: #ff5a5f;
+}
+
+.register-btn {
+    background-color: #ff5a5f;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.heading{
+    padding: 40px 100px 0px 100px;
+}
+
+
+
+/* start of footer */
+.footer {
+    width: 100%;
+    background-color: #24324a;
+    color: #ffffff;
+    padding: 25px 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+}
+
+.about {
+    padding-right: 30px;
+}
+
+.about p {
+    width: 80%;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #c9d1d9;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #c9d1d9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff5a5f;
+}
+
+.social-icons {
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    color: #c9d1d9;
+    margin-right: 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff5a5f;
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.subscribe input {
+    padding: 15px 30px;
+    border-radius: 35px;
+    border: none;
+    background-color: #3a4a6b;
+    color: #c9d1d9;
+    width: 200px;
+    margin-right: 5px;
+    outline: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+}
+
+.subscribe button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #3a4a6b;
+    color: #c9d1d9;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.subscribe button:hover {
+    background-color: #ff5a5f;
+    color: #ffffff;
+}
+
+/* end of footer */
