@@ -92,7 +92,18 @@ body {
     text-decoration: underline;
 }
 
+
+input.error {
+    border-bottom: 2px solid red;
+}
+
+input.error:focus {
+    border-color: red;
+}
+
 .error-message {
     color: red;
     font-size: 12px;
+    margin-top: 4px;
+    display: block;
 }
