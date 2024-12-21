@@ -1,46 +1,59 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector('.login-form');
     const email = document.getElementById('email');
     const password = document.getElementById('password');
-    const emailError = document.getElementById('emailError');
+    const messageContainer = document.createElement('p');
+    messageContainer.classList.add('form-message');
+    form.appendChild(messageContainer);
 
     form.addEventListener("submit", function (event) {
-        let valid = true;
-
         clearErrorStyles([email, password]);
+        messageContainer.textContent = "";
 
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (!emailPattern.test(email.value)) {
-            showError(email, emailError, "Please enter a valid email.");
-            valid = false;
+            showError(email, "Please enter a valid email.");
+            event.preventDefault();
+            return;
         }
 
         if (password.value.trim() === "") {
-            showError(password, null, "Password cannot be empty.");
-            valid = false;
+            showError(password, "Password cannot be empty.");
+            event.preventDefault();
+            return;
         }
 
-        if (!valid) {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        const user = users.find(user => user.email === email.value && user.password === password.value);
+
+        if (user) {
+            messageContainer.textContent = "Login successful! Redirecting to the home page...";
+            messageContainer.classList.add('success-message');
+            setTimeout(() => {
+                window.location.href = "../pages/home.html";
+            }, 2000);
+        } else {
+            messageContainer.textContent = "Invalid email or password. Please try again.";
+            messageContainer.classList.add('error-message');
             event.preventDefault();
         }
     });
 
-    function showError(inputElement, errorElement = null, message = "") {
+    function showError(inputElement, message) {
         inputElement.classList.add('error');
-        if (errorElement) {
-            errorElement.textContent = message;
-        } else {
-
-            const errorMessage = document.createElement('p');
-            errorMessage.textContent = message;
-            errorMessage.classList.add('error-message');
-            inputElement.parentNode.appendChild(errorMessage);
-        }
+        const errorMessage = document.createElement('span');
+        errorMessage.classList.add('error-message');
+        errorMessage.textContent = message;
+        inputElement.parentNode.appendChild(errorMessage);
     }
 
     function clearErrorStyles(inputElements) {
         inputElements.forEach(input => {
             input.classList.remove('error');
+            const errorMessages = input.parentNode.querySelectorAll('.error-message');
+            errorMessages.forEach(msg => msg.remove());
         });
     }
 });
