@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+
+.container {
+    padding: 40px 200px;
+}
+
+.main-color {
+    color: #ff5a5f;
+}
+
+div.edit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maincontent {
+    max-width: 100%;
+    font-size: 27px;
+    font-weight: 300;
+    padding-left: 1em;
+}
+
+.change {
+    color: #ff5a5f;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.list {
+    font-size: 17px;
+    margin-left: 5px;
+    padding-top: 0;
+    font-family: sans-serif;
+}
+
+.right {
+    font-size: 22px;
+    margin-left: 0em;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+p.articals {
+    font-size: 20px;
+}

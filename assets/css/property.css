@@ -207,5 +207,46 @@ body {
 
 .hidden {
     display: none;
-    /* Hides unmatched elements in search*/
+}
+
+.price-range {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    appearance: none;
+    background: #ddd;
+    height: 10px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #ff5a5f;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#priceValue {
+    font-weight: bold;
 }
