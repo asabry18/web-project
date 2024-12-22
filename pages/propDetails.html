@@ -18,14 +18,17 @@
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="../assets/images/logo-2.png" alt="Logo" class="logo-img"> <!-- Replace with actual logo path -->
+            <img src="../assets/images/logo-2.png" alt="Logo" class="logo-img">
         </div>
         <nav class="nav-links">
             <a href="home.html">Home</a>
             <a href="property.html">Property</a>
             <a href="about.html">About Us</a>
             <a href="contactUs.html">Contact Us</a>
-            <a href="register.html"><button class="register-btn">+ Register</button></a>
+            <a id="register-link" href="register.html">
+                <button class="register-btn" id="register-btn">+ Register</button>
+            </a>
+            
         </nav>
     </header>
 
@@ -220,5 +223,6 @@
 
 </body>
 <script src="../assets/js/propDetails.js"></script>
+<script src="../assets/js/auth.js"></script>
 
 </html>

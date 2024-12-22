@@ -62,13 +62,24 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     isValid = false;
   }
 
-  // If all fields are valid, submit the form
+  // If all fields are valid, submit the form 
   if (isValid) {
+    const contactData = {
+      name,
+      email,
+      phone,
+      subject,
+      message,
+    };
+
+    const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+    contacts.push(contactData);
+    localStorage.setItem("contacts", JSON.stringify(contacts));
     const successMessage = document.createElement("div");
     successMessage.textContent = "Form submitted successfully!";
     successMessage.className = "success";
     document.querySelector(".contact-form").appendChild(successMessage);
 
-    // this.submit();
+    document.getElementById("contactForm").reset();
   }
 });

@@ -1,59 +1,52 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector('.login-form');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const messageContainer = document.createElement('p');
-    messageContainer.classList.add('form-message');
-    form.appendChild(messageContainer);
+    const form = document.querySelector(".login-form");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
 
     form.addEventListener("submit", function (event) {
-        clearErrorStyles([email, password]);
-        messageContainer.textContent = "";
+        event.preventDefault();
+        let valid = true;
 
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailPattern.test(email.value)) {
-            showError(email, "Please enter a valid email.");
-            event.preventDefault();
-            return;
+
+        if (email.value === "") {
+            showError(email, "Please enter your email.");
+            valid = false;
         }
 
-        if (password.value.trim() === "") {
-            showError(password, "Password cannot be empty.");
-            event.preventDefault();
-            return;
+        if (password.value === "") {
+            showError(password, "Please enter your password.");
+            valid = false;
         }
 
+        if (!valid) return;
+
+        // Check user in localStorage
         const users = JSON.parse(localStorage.getItem("users")) || [];
+        const foundUser = users.find(user => user.email === email.value);
 
-        const user = users.find(user => user.email === email.value && user.password === password.value);
+        if (foundUser) {
+            if (foundUser.password === password.value) {
+                const loggedInUser = {
+                    name: foundUser.name,
+                    email: foundUser.email,
+                };
+                localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
 
-        if (user) {
-            messageContainer.textContent = "Login successful! Redirecting to the home page...";
-            messageContainer.classList.add('success-message');
-            setTimeout(() => {
-                window.location.href = "../pages/home.html";
-            }, 2000);
+                window.location.href = "home.html";
+            } else {
+                showError(password, "Incorrect password.");
+            }
         } else {
-            messageContainer.textContent = "Invalid email or password. Please try again.";
-            messageContainer.classList.add('error-message');
-            event.preventDefault();
+            showError(email, "No account found with this email.");
         }
     });
 
     function showError(inputElement, message) {
-        inputElement.classList.add('error');
-        const errorMessage = document.createElement('span');
-        errorMessage.classList.add('error-message');
+        const errorMessage = document.createElement("p");
+        errorMessage.classList.add("error-message");
         errorMessage.textContent = message;
+
         inputElement.parentNode.appendChild(errorMessage);
     }
 
-    function clearErrorStyles(inputElements) {
-        inputElements.forEach(input => {
-            input.classList.remove('error');
-            const errorMessages = input.parentNode.querySelectorAll('.error-message');
-            errorMessages.forEach(msg => msg.remove());
-        });
-    }
 });

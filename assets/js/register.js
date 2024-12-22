@@ -5,16 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirm-password');
     const messageContainer = document.createElement('p');
-    messageContainer.classList.add('form-message');
     form.appendChild(messageContainer);
 
     form.addEventListener("submit", function (event) {
         let valid = true;
 
-        clearErrorStyles([name, email, password, confirmPassword]);
-        messageContainer.textContent = ""; // Clear previous messages
-
-        if (name.value.trim() === "") {
+        if (name.value === "") {
             showError(name, "Please enter your name.");
             valid = false;
         }
@@ -48,9 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 users.push({ name: name.value, email: email.value, password: password.value });
                 localStorage.setItem("users", JSON.stringify(users));
 
-                messageContainer.textContent = "Registration successful! Redirecting to login page...";
-                messageContainer.classList.add('success-message');
-
                 setTimeout(() => {
                     window.location.href = "login.html";
                 }, 2000);
@@ -68,11 +61,4 @@ document.addEventListener("DOMContentLoaded", () => {
         inputElement.parentNode.appendChild(errorMessage);
     }
 
-    function clearErrorStyles(inputElements) {
-        inputElements.forEach(input => {
-            input.classList.remove('error');
-            const errorMessages = input.parentNode.querySelectorAll('.error-message');
-            errorMessages.forEach(msg => msg.remove());
-        });
-    }
 });
